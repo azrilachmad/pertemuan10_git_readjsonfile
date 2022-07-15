@@ -1,0 +1,16 @@
+<h1>Hello</h1>
+<h3>This is Contact Page</h3>
+<% if (contacts.length === 0 || contacts.length === null || contacts.length === undefined) {
+%>
+<p>Data array kosong atau tidak ditemukan</p>
+<% } else { %>
+<p>Jumlah Data Kontak : <%= contacts.length %></p>
+<ul>
+  <% contacts.forEach(data => { %>
+  <li>Nama: <%= data.name %></li>
+  <li>Email: <%= data.email %></li>
+  <li>Phone: <%= data.mobile %></li><br>
+  <% }) %>
+</ul>
+
+<% } %> 
